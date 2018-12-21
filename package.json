@@ -1,0 +1,35 @@
+{
+  "name": "womensfoundation-theme",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Creative Distillery",
+  "private": true,
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "autoprefixer": "^8.4.1",
+    "babel-plugin-loop-optimizer": "^1.4.1",
+    "browserify": "^16.2.0",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "streamqueue": "^1.1.2",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

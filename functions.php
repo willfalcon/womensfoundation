@@ -18,7 +18,8 @@
 	    $prk_hook_options=hook_options();
 	    $prk_hook_options['active_visual_composer']=HOOK_VC_ON;	    
 	    wp_localize_script('hook_main', 'theme_options', $prk_hook_options);*/
-	    wp_enqueue_script('rwdImageMaps', get_stylesheet_directory_uri() . '/js/jquery.rwdImageMaps.min.js', array('jquery'), $prk_theme->Version, true );
+		wp_enqueue_script('rwdImageMaps', get_stylesheet_directory_uri() . '/js/jquery.rwdImageMaps.min.js', array('jquery'), $prk_theme->Version, true );
+		wp_enqueue_style('cd-styles', get_stylesheet_directory_uri() . '/dist/main.min.css' );
 	}
 	/*
 	UNCOMMENT THIS CODE TO LOAD TRANSLATIONS FROM THE CHILD THEME
@@ -1264,4 +1265,20 @@
 	    return '';
 	}
 	add_shortcode('wf_selectors', 'wf_selectors_func');
-?>
+
+	function hexToRgb($hex, $alpha = false) {
+		$hex      = str_replace('#', '', $hex);
+		$length   = strlen($hex);
+		$r = hexdec($length == 6 ? substr($hex, 0, 2) : ($length == 3 ? str_repeat(substr($hex, 0, 1), 2) : 0));
+		$g = hexdec($length == 6 ? substr($hex, 2, 2) : ($length == 3 ? str_repeat(substr($hex, 1, 1), 2) : 0));
+		$b = hexdec($length == 6 ? substr($hex, 4, 2) : ($length == 3 ? str_repeat(substr($hex, 2, 1), 2) : 0));
+		if ( $alpha ) {
+			$a = $alpha;
+		}
+		$rgb = 'rgb(' . $r . ',' . $g . ',' . $b;
+		if ($alpha) {
+			$rgb .= ',' . $a;
+		}
+		$rgb .= ')';
+		return $rgb;
+	}

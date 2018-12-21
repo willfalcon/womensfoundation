@@ -1,0 +1,9 @@
+$purple: #753BBD;
+
+$font-family: 'yummobold', 'Roboto', sans-serif;
+
+@mixin responsive {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
